@@ -1,0 +1,34 @@
+type User {
+    _id: ID!
+    prenom: String!
+    nom: String!
+    email: String!
+    password: String!
+    
+}
+                        input InputUser {
+                            prenom: String!
+                            nom: String!
+                            email: String!
+                            password: String
+                            
+                        }
+type Article {
+    _id: ID!
+    nom: String!
+    datePublication: String!
+    author: User!
+}
+                            input InputArticle {
+                                nom: String!
+                                datePublication: String!
+                            }
+type Query {
+    articles: [Article!]
+    users: [User!]!
+    articlesByUser: [Article!]!
+}
+type Mutation {
+    createArticle(inputArticle: InputArticle): Article
+    createUser(inputUser: InputUser): User
+}
