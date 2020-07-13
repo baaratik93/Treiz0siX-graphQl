@@ -13,20 +13,33 @@ type User {
                             password: String
                             
                         }
+type authData {
+    _id: ID!
+    token: String!
+    tokenExpiration: Int!
+}
+                        input Credentials {
+                                email: String!
+                             password: String
+                            }
 type Article {
     _id: ID!
     nom: String!
+    contenu: String!
     datePublication: String!
     author: User!
 }
                             input InputArticle {
                                 nom: String!
+                                contenu: String!
                                 datePublication: String!
                             }
+                            
 type Query {
     articles: [Article!]
     users: [User!]!
     articlesByUser: [Article!]!
+    login(credentials: Credentials): authData
 }
 type Mutation {
     createArticle(inputArticle: InputArticle): Article
