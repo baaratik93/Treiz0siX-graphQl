@@ -1,0 +1,30 @@
+{
+  "name": "Treiz0siX",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baaratik93/Treiz0siX-graphQl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.23"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/baaratik93/Treiz0siX-graphQl/issues"
+  },
+  "homepage": "https://github.com/baaratik93/Treiz0siX-graphQl#readme"
+}
