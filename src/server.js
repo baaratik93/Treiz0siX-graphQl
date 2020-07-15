@@ -1,5 +1,7 @@
+if (process.env.NODE_ENV !='production') {
+  require('dotenv').config()
+}
 const { GraphQLServer } = require('graphql-yoga')
-require('dotenv').config();
 const mongoose		=	require('mongoose');
 const resolvers = require('../graphql/resolvers/index');
 mongoose.connect(process.env.DB_SHELL, { useNewUrlParser: true })
