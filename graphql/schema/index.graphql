@@ -39,9 +39,10 @@ type Query {
     articles: [Article!]
     users: [User!]!
     articlesByUser: [Article!]!
-    login(credentials: Credentials): authData
 }
 type Mutation {
     createArticle(inputArticle: InputArticle): Article
     createUser(inputUser: InputUser): User
+    login(credentials: Credentials): authData
+
 }
