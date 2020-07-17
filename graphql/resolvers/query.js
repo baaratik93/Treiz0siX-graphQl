@@ -3,8 +3,10 @@
 const query = {
     users: async (args, req) => {
         if(!req.isAuth){
+            console.log(req)
             throw new Error("Veuillez vous identifier");
         }
+        
         const users = await User.find()
             try
             {
