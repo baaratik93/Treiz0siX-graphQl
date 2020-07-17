@@ -2,7 +2,7 @@
  const isAuth       =   require('../../middlewares/is-auth')
 const query = {
     users: async (args, req) => {
-        if(!isAuth){
+        if(!req.isAuth){
             throw new Error("Veuillez vous identifier");
         }
         const users = await User.find()
